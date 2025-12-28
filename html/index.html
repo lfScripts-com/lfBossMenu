@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestion Entreprise</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <div id="notification" class="notification"></div>
+
+        <div class="container">
+            <div class="sidebar">
+                <div class="header">
+                    <img src="images/header_default.webp" alt="Header" id="header-image">
+                </div>
+                <ul>
+                    <li><a href="#" data-page="dashboard" class="active">Accueil</a></li>
+                    <li><a href="#" data-page="employees">Gérer les utilisateurs</a></li>
+                    <li><a href="#" data-page="grades">Gérer les grades</a></li>
+                    <li><a href="#" data-page="vehicles">Gérer les véhicules</a></li>
+                    <li><a href="#" data-page="close">Fermer</a></li>
+                </ul>
+            </div>
+            <div class="content">
+                <div id="dashboard" class="page active">
+                    <div class="dashboard-header">
+                        <h2>Tableau de bord</h2>
+                    </div>
+                    <div class="stats-cards">
+                        <div class="card">
+                            <div class="card-icon">
+                                <i class="fas fa-building"></i>
+                            </div>
+                            <div class="card-content">
+                                <h3 id="company-name">Nom Société</h3>
+                                <p>Nom de la société</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="card-content">
+                                <h3 id="employee-count">0</h3>
+                                <p>Nombre d'employés</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="employees" class="page">
+                    <h2>Gérer les utilisateurs</h2>
+                    <div class="employee-filters">
+                        <div class="search-container">
+                            <i class="fas fa-search"></i>
+                            <input type="text" id="employee-search" placeholder="Rechercher par nom, prénom ou grade..." class="search-input">
+                        </div>
+                        <div class="sort-container">
+                            <label for="employee-sort">Trier par :</label>
+                            <select id="employee-sort" class="sort-select">
+                                <option value="grade-desc">Grade (du plus haut au plus bas)</option>
+                                <option value="grade-asc">Grade (du plus bas au plus haut)</option>
+                                <option value="name-asc">Nom (A-Z)</option>
+                                <option value="name-desc">Nom (Z-A)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="employee-cards">
+                    </div>
+                </div>
+
+                <!-- Gérer les grades -->
+                <div id="grades" class="page">
+                    <h2>Gérer les grades <span class="salary-max-info">(salaire : 50$ - 250$)</span></h2>
+                    <div class="grade-cards">
+                    </div>
+                </div>
+
+                <div id="vehicles" class="page">
+                    <h2>Gérer les véhicules</h2>
+                    <div class="vehicle-cards">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
