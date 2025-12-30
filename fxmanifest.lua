@@ -1,7 +1,8 @@
 fx_version 'cerulean'
 game 'gta5'
 lua54 'yes'
-
+version '0.0.1'
+author 'LFScripts, xLaugh, Firgyy'
 client_scripts {
     'config.lua',
     'locales/*.lua',
